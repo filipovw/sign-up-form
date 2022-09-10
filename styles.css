@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: NorseBold;
+  src: url("Norse-Bold.otf") format("opentype");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.image-sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  background-repeat: no-repeat;
+  gap: 41.5rem;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  top: 14rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 0 1rem 0;
+}
+
+.logo-text h1 {
+  color: white;
+  font-family: NorseBold, sans-serif;
+  font-size: 6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.image-sidebar > p {
+  text-align: center;
+  color: white;
+}
+
+.image-sidebar a {
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex: 2 1 0;
+  flex-direction: column;
+}
