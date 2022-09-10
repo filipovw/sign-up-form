@@ -14,8 +14,15 @@
 body {
   padding: 0;
   margin: 0;
-  height: 100%;
-  overflow: auto;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1900px) {
+  body {
+    overflow: auto;
+  }
 }
 
 .container {
@@ -39,7 +46,7 @@ body {
   justify-content: center;
   gap: 1rem;
   position: relative;
-  top: 14rem;
+  top: 16rem;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem 0 1rem 0;
 }
@@ -67,6 +74,7 @@ body {
   flex-direction: column;
   position: relative;
   justify-content: space-around;
+  top: 6.7rem;
 }
 
 .account button {
@@ -91,7 +99,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  margin-top: 7.4rem;
+  top: 1.2rem;
 }
 
 .header-text p,
@@ -103,11 +111,11 @@ body {
 
 .form {
   position: relative;
-  margin-bottom: 2.8rem;
+  bottom: 1.4rem;
   background: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  margin-left: -4rem;
+  left: -4rem;
   padding-bottom: 1rem;
 }
 
@@ -115,19 +123,21 @@ body {
 .form h2,
 .form .first-row label,
 .form .second-row label,
-.form .third-row label {
+.form .third-row label,
+.error1 {
   position: relative;
-  margin-left: 4rem;
+  left: 4rem;
 }
 
 .account {
   position: relative;
-  bottom: 4.5rem;
+  bottom: 6rem;
 }
 
 .form h2 {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .first-row,
@@ -179,4 +189,11 @@ body {
 
 .error {
   border-color: #900 !important;
+}
+
+.error1 {
+  color: #900;
+  position: relative;
+  bottom: 1rem;
+  font-size: 0.8rem;
 }

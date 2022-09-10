@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -27,12 +27,11 @@
       <div class="content">
         <div class="header-text">
           <p>
-            This is not a real online service! You <i>know</i> you need
-            something<br />
+            This is not a real online service! You know you need something<br />
             like this in your life to help you realize your deepest dreams.<br />
             Sign up <i>now</i> to get started.
           </p>
-          <p>You know you want to.</p>
+          <p>You <i>know</i> you want to.</p>
         </div>
         <div class="form">
           <h2>Let's do this!</h2>
@@ -93,17 +92,20 @@
                 />
               </div>
               <div class="confirm-password">
-                <label for="confirm-password">Confirm Password</label>
+                <label for="confirmPassword">Confirm Password</label>
                 <input
                   class="error"
                   type="password"
-                  id="confirm-password"
-                  name="confirm-password"
+                  id="confirmPassword"
+                  name="confirmPassword"
                   minlength="6"
                   required
                 />
               </div>
             </div>
+            <span class="error1" aria-live="polite"
+              >* Passwords do not match</span
+            >
           </form>
         </div>
         <div class="account">
