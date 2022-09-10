@@ -12,61 +12,105 @@
     <div class="container">
       <div class="image-sidebar">
         <div class="logo-text">
-            <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" width="100px">
-            <h1>ODIN</h1>
-    </div>
-        <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Hallie West</a> on <a href="https://unsplash.com/">Unsplash</a></p>
+          <img
+            src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"
+            width="100px"
+          />
+          <h1>ODIN</h1>
+        </div>
+        <p>
+          Photo by
+          <a href="https://unsplash.com/@haliewestphoto">Hallie West</a> on
+          <a href="https://unsplash.com/">Unsplash</a>
+        </p>
       </div>
       <div class="content">
         <div class="header-text">
           <p>
-            This is not a real online service! You <i>know</i> you need something<br> like
-            this in your life to help you realize your deepest dreams.<br> 
+            This is not a real online service! You <i>know</i> you need
+            something<br />
+            like this in your life to help you realize your deepest dreams.<br />
             Sign up <i>now</i> to get started.
           </p>
           <p>You know you want to.</p>
         </div>
         <div class="form">
-            <h2>Let's do this!</h2>
-          <form">
-          <div class="first-row">
-            <div class="firstName">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName">
-        </div>
-        <div class="lastName">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName">
-        </div>
-        </div>
-        <div class="second-row">
-            <div class="email">
-            <label for="mail">Email</label>
-            <input type="mail" id="mail" name="mail">
-        </div>
-        <div class="phone-number">
-            <label for="tel">Phone Number</label>
-            <input type="tel" id="tel" name="tel">
-        </div>
-        </div>
-        <div class="third-row">
-            <div class="password">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-        </div>
-        <div class="confirm-password">
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm-password">
-        </div>
-        </div>
-
-        </form>
+          <h2>Let's do this!</h2>
+          <form id="form1">
+            <div class="first-row">
+              <div class="firstName">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  pattern="[A-Z][a-z]+"
+                  maxlength="20"
+                  title="First name should start with a capital letter, followed by lowercase letters."
+                  required
+                />
+              </div>
+              <div class="lastName">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  pattern="[A-Z][a-z]+"
+                  maxlength="20"
+                  title="Last name should start with a capital letter, followed by lowercase letters."
+                  required
+                />
+              </div>
+            </div>
+            <div class="second-row">
+              <div class="email">
+                <label for="mail">Email</label>
+                <input type="email" id="mail" name="mail" required />
+              </div>
+              <div class="phone-number">
+                <label for="tel">Phone Number</label>
+                <input
+                  type="tel"
+                  id="tel"
+                  name="tel"
+                  pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+                  title="Phone number should match one of the following patterns:&#10;123-456-7890&#10;(123) 456-7890&#10;123 456 7890&#10;123.456.7890&#10;+91 (123) 456-7890&#10;1234567890"
+                  required
+                />
+              </div>
+            </div>
+            <div class="third-row">
+              <div class="password">
+                <label for="password">Password</label>
+                <input
+                  class="error"
+                  type="password"
+                  id="password"
+                  name="password"
+                  minlength="6"
+                  required
+                />
+              </div>
+              <div class="confirm-password">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                  class="error"
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  minlength="6"
+                  required
+                />
+              </div>
+            </div>
+          </form>
         </div>
         <div class="account">
-            <form action="#">
-            <button type="submit">Create Account</button>
-        </form>
-            <p>Already have an account? <a href="#">Log in</a></p>
+          <button type="submit" form="form1" value="Submit">
+            Create Account
+          </button>
+          <p>Already have an account? <a href="#">Log in</a></p>
         </div>
       </div>
     </div>
