@@ -78,8 +78,9 @@ body {
   font-weight: bold;
 }
 
-.account button a {
+.account form button {
   color: white;
+  cursor: pointer;
 }
 
 .account a {
